@@ -18,10 +18,14 @@ export default function  Calculator() {
             <Text>Ebay Price</Text>
             <TextInput
                 placeholder='Name'
-                value={"1"}
+                value={`${calculatorState.name}`}
+                onChangeText={calculatorState.updateName}
             ></TextInput>
             <TextInput
+                inputMode='decimal'
                 placeholder='Price'
+                value={`${calculatorState.value}`}
+                onChangeText={calculatorState.updateValue}
             ></TextInput>
 
             <Button title={"Calculate"} onPress={handleCalculate} />
